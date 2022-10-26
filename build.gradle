@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'de.nordakademie.a21b'
+version '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(files("libs/algodat-interfaces-1.0-SNAPSHOT.jar"))
+    implementation(files("libs/algodat-tests-1.0-SNAPSHOT.jar"))
+    implementation(files("libs/experiments-1.0-SNAPSHOT.jar"))
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
