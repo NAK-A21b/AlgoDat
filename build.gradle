@@ -8,12 +8,15 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://gitlab2.nordakademie.de/api/v4/projects/4068/packages/maven'
+    }
 }
 
 dependencies {
-    implementation(files("libs/algodat-interfaces-1.0-SNAPSHOT.jar"))
-    implementation(files("libs/algodat-tests-1.0-SNAPSHOT.jar"))
-    implementation(files("libs/experiments-1.0-SNAPSHOT.jar"))
+    implementation 'de.himmelspach:algodat-interfaces:1.0-SNAPSHOT'
+    implementation 'de.himmelspach:algodat-tests:1.0-SNAPSHOT'
+    implementation 'de.himmelspach:algodat-experiments:1.0-SNAPSHOT'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
 }
